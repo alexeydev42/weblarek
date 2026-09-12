@@ -1,8 +1,8 @@
 # WebLarek
 
-WebLarek is a small e-commerce application for browsing products, adding them to a cart and placing an order.
+WebLarek is a TypeScript e-commerce application for browsing products, adding them to a cart and placing an order.
 
-The project is written in TypeScript and uses an MVP-style architecture to keep data, presentation and application logic separated.
+The project focuses on application architecture, API interaction and separation of responsibilities between data, presentation and coordination logic.
 
 ## Features
 
@@ -17,13 +17,13 @@ The project is written in TypeScript and uses an MVP-style architecture to keep 
 
 ## Architecture
 
-The application is divided into three main parts:
+The application follows an MVP-style architecture:
 
 - **Model** — stores and manages application data;
 - **View** — renders interface elements and handles user interaction;
-- **Presenter** — connects models and views through application events.
+- **Presenter** — coordinates models and views through application events.
 
-An event-based approach is used to reduce direct dependencies between parts of the application.
+An event-based approach is used to reduce direct dependencies between parts of the application and keep responsibilities separated.
 
 ## Tech stack
 
@@ -32,21 +32,6 @@ An event-based approach is used to reduce direct dependencies between parts of t
 - SCSS
 - Vite
 - REST API
-
-## Getting started
-
-```bash
-git clone https://github.com/person5494/weblarek.git
-cd weblarek
-npm install
-npm run dev
-```
-
-Production build:
-
-```bash
-npm run build
-```
 
 ## Project structure
 
@@ -59,6 +44,30 @@ src/
 └── main.ts         application entry point
 ```
 
+## Getting started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/alexeydev42/weblarek.git
+cd weblarek
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
 ## About the project
 
-This project was completed as part of the Yandex Practicum Frontend Developer course. It was used to practice TypeScript, API interaction and application architecture.
+This project was completed as part of the Yandex Practicum Frontend Developer program.
+
+The main focus of my work was TypeScript application logic, API interaction, event-driven communication between application parts and structuring the project around an MVP-style architecture.
