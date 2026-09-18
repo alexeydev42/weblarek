@@ -2,28 +2,38 @@
 
 WebLarek is a TypeScript e-commerce application for browsing products, adding them to a cart and placing an order.
 
-The project focuses on application architecture, API interaction and separation of responsibilities between data, presentation and coordination logic.
+The project is mainly about architecture: separating data, UI and coordination logic, keeping dependencies controlled and organizing the application around an MVP-style approach.
 
-## Features
+<!-- TODO: Add 1 screenshot here: the product catalog with the cart or checkout flow visible. -->
+
+## Key features
 
 - product catalog loaded from an API;
-- product details displayed in a modal window;
+- product details in a modal window;
 - shopping cart management;
 - total price calculation;
 - checkout flow;
-- payment method and delivery information forms;
+- payment and delivery forms;
 - form validation;
 - order submission to the API.
 
 ## Architecture
 
-The application follows an MVP-style architecture:
+The application follows an MVP-style structure:
 
-- **Model** — stores and manages application data;
-- **View** — renders interface elements and handles user interaction;
-- **Presenter** — coordinates models and views through application events.
+- **Model** stores and manages application data;
+- **View** renders interface elements and handles user interaction;
+- **Presenter** coordinates models and views through application events.
 
-An event-based approach is used to reduce direct dependencies between parts of the application and keep responsibilities separated.
+An event-based approach reduces direct dependencies between parts of the application and keeps responsibilities separated.
+
+## What this project demonstrates
+
+The main value of the project is not the number of screens, but the way the code is structured.
+
+I used TypeScript types and interfaces to define data contracts, separated reusable UI classes from application data, and connected parts of the application through events rather than tightly coupling components to each other.
+
+This made the checkout flow, cart updates and product state easier to reason about and extend.
 
 ## Tech stack
 
@@ -37,26 +47,19 @@ An event-based approach is used to reduce direct dependencies between parts of t
 
 ```text
 src/
-├── components/     UI components and base classes
-├── types/          TypeScript types and interfaces
-├── utils/          constants and utility functions
-├── scss/           styles
-└── main.ts         application entry point
+├── components/  # UI components and base classes
+├── types/       # TypeScript types and interfaces
+├── utils/       # constants and utility functions
+├── scss/        # styles
+└── main.ts      # application entry point
 ```
 
-## Getting started
-
-Clone the repository and install dependencies:
+## Run locally
 
 ```bash
 git clone https://github.com/alexeydev42/weblarek.git
 cd weblarek
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
@@ -66,8 +69,6 @@ Production build:
 npm run build
 ```
 
-## About the project
+## Project context
 
-This project was completed as part of the Yandex Practicum Frontend Developer program.
-
-The main focus of my work was TypeScript application logic, API interaction, event-driven communication between application parts and structuring the project around an MVP-style architecture.
+This project was completed as part of the Yandex Practicum Frontend Developer program. My work focused on TypeScript application logic, API interaction, event-driven communication and the separation of responsibilities between application layers.
