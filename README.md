@@ -4,7 +4,9 @@ WebLarek is a TypeScript e-commerce application for browsing products, adding th
 
 The project is mainly about architecture: separating data, UI and coordination logic, keeping dependencies controlled and organizing the application around an MVP-style approach.
 
-<!-- TODO: Add 1 screenshot here: the product catalog with the cart or checkout flow visible. -->
+## Screenshot
+
+![WebLarek product catalog](docs/screenshots/weblarek.webp)
 
 ## Key features
 
@@ -26,6 +28,10 @@ The application follows an MVP-style structure:
 - **Presenter** coordinates models and views through application events.
 
 An event-based approach reduces direct dependencies between parts of the application and keeps responsibilities separated.
+
+### UI component hierarchy
+
+![WebLarek UI component class diagram](docs/uml.webp)
 
 ## What this project demonstrates
 
